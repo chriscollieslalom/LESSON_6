@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { computed, ref } from 'vue'
+import { RouterLink } from 'vue-router'
 
 const isDark = ref(true)
 
@@ -13,10 +14,17 @@ const toggleTheme = () => {
 <template>
   <main class="page-shell" :class="pageClass">
     <div class="card" aria-label="Chris Collie profile card">
-      <button class="theme-toggle" type="button" :aria-label="isDark ? 'Switch to light mode' : 'Switch to dark mode'" @click="toggleTheme">
-        <span class="theme-icon">{{ isDark ? '☀️' : '🌙' }}</span>
-        <span>{{ isDark ? 'Light mode' : 'Dark mode' }}</span>
-      </button>
+      <div class="top-row">
+        <nav class="mini-nav" aria-label="Main navigation">
+          <RouterLink to="/" class="nav-link">Home</RouterLink>
+          <RouterLink to="/about" class="nav-link">About</RouterLink>
+        </nav>
+
+        <button class="theme-toggle" type="button" :aria-label="isDark ? 'Switch to light mode' : 'Switch to dark mode'" @click="toggleTheme">
+          <span class="theme-icon">{{ isDark ? '☀️' : '🌙' }}</span>
+          <span>{{ isDark ? 'Light mode' : 'Dark mode' }}</span>
+        </button>
+      </div>
 
       <div class="avatar" aria-label="Profile picture placeholder">CC</div>
 
