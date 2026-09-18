@@ -34,7 +34,7 @@ const toggleTheme = () => {
       </header>
 
       <nav class="link-stack" aria-label="Social links">
-        <a class="link-button" href="https://www.chriscollie.com" target="_blank" rel="noreferrer">Portfolio</a>
+        <a class="link-button" href="https://www.safdiearchitects.com/projects" target="_blank" rel="noreferrer">Portfolio</a>
         <a class="link-button" href="https://dribbble.com" target="_blank" rel="noreferrer">Dribbble</a>
         <a class="link-button" href="https://www.linkedin.com" target="_blank" rel="noreferrer">LinkedIn</a>
         <a class="link-button" href="mailto:hello@chriscollie.com">Email</a>
